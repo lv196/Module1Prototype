@@ -131,6 +131,7 @@ GameObject:
   - component: {fileID: 918791184}
   - component: {fileID: 918791183}
   - component: {fileID: 918791182}
+  - component: {fileID: 918791185}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -203,6 +204,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &918791185
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 918791181}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c93b5707e85e64303b442eca0f87f03c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerPrefab: {fileID: 5192107324636759233, guid: 0e6550018de604f98be6a1fd3c6f433a,
+    type: 3}
 --- !u!1 &1202658986 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4422108207858381000, guid: 3cbfc5aaec13d4b62bd9d8824cde56b8,
@@ -221,7 +236,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95ea2adf9f2bf43419c4d5b4236898ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bombPrefab: {fileID: 0}
+  bombPrefab: {fileID: 762960995361932104, guid: 183df0b782a034112a8c9c1aea9b66e0,
+    type: 3}
   speed: 20
   leftAndRightEdge: 20
   chanceToChangeDirections: 0.02
@@ -384,5 +400,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 7383443479184101521, guid: 3cbfc5aaec13d4b62bd9d8824cde56b8,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: -7527873710221418021, guid: 3cbfc5aaec13d4b62bd9d8824cde56b8, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 3cbfc5aaec13d4b62bd9d8824cde56b8, type: 3}

@@ -21,7 +21,15 @@ public class Enemy : MonoBehaviour
 
     void Start()
     {
-        //Dropping bombs every second 
+        //Dropping bombs every half second
+        Invoke("DropBomb", 0.5f);
+    }
+
+    void DropBomb()
+    {
+        GameObject bomb = Instantiate<GameObject>(bombPrefab);
+        bomb.transform.position = transform.position;
+        Invoke("DropBomb", secondsBetweenBombDrops);
     }
 
     // Update is called once per frame
@@ -38,7 +46,14 @@ public class Enemy : MonoBehaviour
         }else if (pos.x > leftAndRightEdge)
         {
             speed = -Mathf.Abs(speed); //move left
-        }else if (Random.value < chanceToChangeDirections) 
+        }
+    }
+
+
+    void FixedUpdate()
+    {
+        //Changing directions in now time-based because of FixedUpdate()
+        if (Random.value < chanceToChangeDirections)
         {
             speed *= -1;//Change direction
         }
